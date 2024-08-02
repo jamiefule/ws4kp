@@ -40,6 +40,7 @@ body
     font-family: "Star4000";
     color: #000000;
     background-color: #ffffff;
+    text-align:center
 }
 
 input, button {
@@ -115,7 +116,7 @@ input[type=text] {
 #divTwc
 {
     /*display: none;*/
-    display: block;
+    display:inline-block !important;
     background-color: #000000;
     color: #ffffff;
     width: 640px;
@@ -123,7 +124,7 @@ input[type=text] {
 
 #divTwcMiddle
 {
-    display: flex;
+    display:inline-block !important;
 }
 
 #divTwcLeft
@@ -201,7 +202,7 @@ input[type=text] {
 
 #divTwcNav
 {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     background-color: #000000;
     color: #ffffff;
@@ -251,6 +252,7 @@ input[type=text] {
 #divInfo
 {
     width: 640px;
+    display:inline-block !important;
 }
 
 #divGitHub 
@@ -258,6 +260,7 @@ input[type=text] {
     width: 640px;
     display: flex;
     justify-content: space-evenly;
+    display:inline-block !important;
 }
 
 /*.btn {
@@ -285,6 +288,7 @@ input[type=text] {
 #divRefresh
 {
     width: 640px;
+    display:inline-block !important;
 }
 
 #spanLastUpdate 
@@ -300,6 +304,7 @@ input[type=text] {
 #divUnits, #divThemes
 {
     width: 640px;
+    display:inline-block !important;
 }
 
 #spanUnits, #spanThemes 
