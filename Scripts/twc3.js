@@ -2182,8 +2182,12 @@ var PopulateMarineForecast = function (WeatherParameters)
 
         UpdateWeatherCanvas(WeatherParameters, canvasMarineForecast);
     };
-    BackGroundImage.src = "images/BackGround8_1.png";
-    //BackGroundImage.src = "images/BackGround8_" + _Themes.toString() + ".png";
+
+    if(BGThemes.includes(_Themes.toString())){
+        BackGroundImage.src = "images/BackGround8_" + _Themes.toString() + ".png";
+    } else{
+        BackGroundImage.src = "images/BackGround8_1.png";
+    }
 
 };
 
@@ -2581,8 +2585,12 @@ var PopulateAirQuality = function (WeatherParameters)
 
         UpdateWeatherCanvas(WeatherParameters, canvasAirQuality);
     };
-    BackGroundImage.src = "images/BackGround9_1.png";
-    //BackGroundImage.src = "images/BackGround9_" + _Themes.toString() + ".png";
+
+    if(BGThemes.includes(_Themes.toString())){
+        BackGroundImage.src = "images/BackGround9_" + _Themes.toString() + ".png";
+    } else{
+        BackGroundImage.src = "images/BackGround9_1.png";
+    }
 
 };
 
@@ -9441,8 +9449,11 @@ var PopulateTravelCities = function (WeatherParameters)
 
             UpdateWeatherCanvas(WeatherParameters, canvasTravelForecast);
         };
-        BackGroundImage.src = "images/BackGround6_1.png";
-        //BackGroundImage.src = "images/BackGround6_" + _Themes.toString() + ".png";
+        if(BGThemes.includes(_Themes.toString())){
+            BackGroundImage.src = "images/BackGround6_" + _Themes.toString() + ".png";
+        } else{
+            BackGroundImage.src = "images/BackGround6_1.png";
+        }
     };
 
     var cnvTravelCitiesScroll;
@@ -10345,8 +10356,12 @@ var ShowRegionalMap = function (WeatherParameters, TomorrowForecast1, TomorrowFo
 
                 UpdateWeatherCanvas(WeatherParameters, canvasRegionalMap);
             };
-            BackGroundImage.src = "images/BackGround5_1.png";
-            //BackGroundImage.src = "images/BackGround5_" + _Themes.toString() + ".png";
+
+            if(BGThemes.includes(_Themes.toString())){
+                BackGroundImage.src = "images/BackGround5_" + _Themes.toString() + ".png";
+            } else{
+                BackGroundImage.src = "images/BackGround5_1.png";
+            }
         }
         else
         {
@@ -10437,8 +10452,11 @@ var ShowRegionalMap = function (WeatherParameters, TomorrowForecast1, TomorrowFo
 
                 UpdateWeatherCanvas(WeatherParameters, canvasRegionalObservations);
             };
-            BackGroundImage.src = "images/BackGround5_1.png";
-            //BackGroundImage.src = "images/BackGround5_" + _Themes.toString() + ".png";
+            if(BGThemes.includes(_Themes.toString())){
+                BackGroundImage.src = "images/BackGround5_" + _Themes.toString() + ".png";
+            } else{
+                BackGroundImage.src = "images/BackGround5_1.png";
+            }
         }
     };
 
@@ -11562,7 +11580,7 @@ var ShowDopplerMap = function (WeatherParameters)
                             };
                         
                             if(BGThemes.includes(_Themes.toString())){
-                                //BackGroundImage.src = "images/BackGround4_" + _Themes.toString() + ".png";
+                                BackGroundImage.src = "images/BackGround4_" + _Themes.toString() + ".png";
                             } else{
                                 BackGroundImage.src = "images/BackGround4_1.png";
                             }
@@ -11898,7 +11916,7 @@ var ShowDopplerMap2 = function (WeatherParameters)
                         };
                         
                         if(BGThemes.includes(_Themes.toString())){
-                            //BackGroundImage.src = "images/BackGround4_" + _Themes.toString() + ".png";
+                            BackGroundImage.src = "images/BackGround4_" + _Themes.toString() + ".png";
                         } else{
                             BackGroundImage.src = "images/BackGround4_1.png";
                         }
