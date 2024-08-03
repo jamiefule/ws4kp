@@ -1911,3 +1911,9 @@ var getBodyScaleValue = function ()
     var scaleValue = parseFloat(scaleArray[scaleArray.length - 3]);
     return scaleValue;
 };
+
+//setVolume
+window.SetVolume = function(val)
+{
+    iframeTwc[0].contentWindow.VolumeAudio(val/100);
+}
