@@ -1231,8 +1231,8 @@ var PopulateTideInfo = function (WeatherParameters)
         UpdateWeatherCanvas(WeatherParameters, canvasAlmanacTides);
     };
     //BackGroundImage.src = "images/BackGround1_1.png";
-    //BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
-    BackGroundImage.src = "images/BackGround1_1.png";
+    BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
+    //BackGroundImage.src = "images/BackGround1_1.png";
 };
 
 var GetOutlook = function (WeatherParameters)
@@ -1549,8 +1549,8 @@ var PopulateOutlook = function (WeatherParameters)
 
         UpdateWeatherCanvas(WeatherParameters, canvasOutlook);
     };
-    //BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
-    BackGroundImage.src = "images/BackGround1_1.png";
+    BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
+    //BackGroundImage.src = "images/BackGround1_1.png";
 };
 
 var GetOutlookDescription = function (OutlookIndicator)
@@ -6351,8 +6351,8 @@ var PopulateCurrentConditions = function (WeatherParameters)
 
             UpdateWeatherCanvas(WeatherParameters, canvasCurrentWeather);
         };
-        BackGroundImage.src = "images/BackGround1_1.png";
-        //BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
+        //BackGroundImage.src = "images/BackGround1_1.png";
+        BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
     };
 
     if (_DontLoadGifs == true || WeatherCurrentConditions.Icon == "")
@@ -6835,8 +6835,11 @@ var PopulateExtendedForecast = function (WeatherParameters, ScreenIndex)
 
             UpdateWeatherCanvas(WeatherParameters, $(canvas));
         };
-        BackGroundImage.src = "images/BackGround2_1.png";
-        //BackGroundImage.src = "images/BackGround2_" + _Themes.toString() + ".png";
+        if(BGThemes.includes(_Themes.toString())){
+            BackGroundImage.src = "images/BackGround2_" + _Themes.toString() + ".png";
+        } else{
+            BackGroundImage.src = "images/BackGround2_1.png";
+        }
 
     };
 
@@ -7596,8 +7599,8 @@ var PopulateLocalForecast = function (WeatherParameters)
 
         UpdateWeatherCanvas(WeatherParameters, canvasLocalForecast);
     };
-    BackGroundImage.src = "images/BackGround1_1.png";
-    //BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
+    //BackGroundImage.src = "images/BackGround1_1.png";
+    BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
 
 };
 
@@ -8861,8 +8864,11 @@ var PopulateAlmanacInfo = function (WeatherParameters)
 
                 UpdateWeatherCanvas(WeatherParameters, canvasAlmanac);
             };
-            BackGroundImage.src = "images/BackGround3_1.png";
-            //BackGroundImage.src = "images/BackGround3_" + _Themes.toString() + ".png";
+            if(BGThemes.includes(_Themes.toString())){
+                BackGroundImage.src = "images/BackGround3_" + _Themes.toString() + ".png";
+            } else{
+                BackGroundImage.src = "images/BackGround3_1.png";
+            }
         }
     }
 
@@ -10017,8 +10023,8 @@ var PopulateRegionalObservations = function (WeatherParameters)
 
         UpdateWeatherCanvas(WeatherParameters, canvasLatestObservations);
     };
-    BackGroundImage.src = "images/BackGround1_1.png";
-    //BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
+    //BackGroundImage.src = "images/BackGround1_1.png";
+    BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
 
 };
 
@@ -11554,8 +11560,12 @@ var ShowDopplerMap = function (WeatherParameters)
 
                                 WeatherParameters.Progress.DopplerRadar = LoadStatuses.Loaded;
                             };
-                            BackGroundImage.src = "images/BackGround4_1.png";
-                            //BackGroundImage.src = "images/BackGround4_" + _Themes.toString() + ".png";
+                        
+                            if(BGThemes.includes(_Themes.toString())){
+                                //BackGroundImage.src = "images/BackGround4_" + _Themes.toString() + ".png";
+                            } else{
+                                BackGroundImage.src = "images/BackGround4_1.png";
+                            }
 
                         }
                     };
@@ -11886,7 +11896,12 @@ var ShowDopplerMap2 = function (WeatherParameters)
 
                             WeatherParameters.Progress.DopplerRadar = LoadStatuses.Loaded;
                         };
-                        BackGroundImage.src = "images/BackGround4_1.png";
+                        
+                        if(BGThemes.includes(_Themes.toString())){
+                            //BackGroundImage.src = "images/BackGround4_" + _Themes.toString() + ".png";
+                        } else{
+                            BackGroundImage.src = "images/BackGround4_1.png";
+                        }
                     }
                 };
                 RadarImage.src = Url;
@@ -12531,8 +12546,8 @@ var Progress = function (e)
             }
         };
         //BackGroundImage.src = "images/BackGround1_1.png";
-        //BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
-        BackGroundImage.src = "images/BackGround1_1.png";
+        BackGroundImage.src = "images/BackGround1_" + _Themes.toString() + ".png";
+        //BackGroundImage.src = "images/BackGround1_1.png";
     };
     this.DrawProgress();
 };
@@ -13323,7 +13338,16 @@ var Themes = {
     ThemeB: 2, // Sea Foam
     ThemeC: 3, // Comsic
     ThemeD: 4, // Dark
+    ThemeE: 5, //Frutiger Aero
 };
+
+//List of themes that have extra BackGround images
+var BGThemes = [
+    '1',
+    '2',
+    '5' 
+];
+
 var _Themes = Themes.ThemeA;
 var _TopColor1 = "rgb(192, 91, 2)";
 var _TopColor2 = "rgb(72, 34, 64)";
@@ -13392,6 +13416,13 @@ var AssignThemes = function (e)
             _SideColor1 = "rgb(46, 18, 81)";
             _SideColor2 = "rgb(115, 27, 201)";
             break;
+        case "THEMEE":
+        _Themes = Themes.ThemeE;
+        _TopColor1 = "rgba(114, 27, 200, 0)";
+        _TopColor2 = "rgba(73, 34, 66, 0)";
+        _SideColor1 = "rgba(46, 18, 81, 0)";
+        _SideColor2 = "rgba(115, 27, 201, 0)";
+        break;
         case "THEMED":
             _Themes = Themes.ThemeD;
             _TopColor1 = "rgb(96, 96, 96)";

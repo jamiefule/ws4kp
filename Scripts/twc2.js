@@ -1303,6 +1303,10 @@ $(function ()
     {
         $("#radThemeC").prop("checked", "checked");
     }
+    else if (TwcThemes == "THEMEE")
+    {
+        $("#radThemeE").prop("checked", "checked");
+    }
 
     $("input[type='radio'][name='radUnits']").on("change", function ()
     {

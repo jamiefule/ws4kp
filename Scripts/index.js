@@ -669,6 +669,7 @@ var Themes = {
     ThemeB: 2, // Sea Foam
     ThemeC: 3, // Comsic
     ThemeD: 4, // Dark
+    ThemeE: 5, //Frutiger Aero
 };
 var _Themes = Themes.ThemeA;
 
@@ -695,6 +696,9 @@ var AssignThemes = function (e)
         case "THEMED":
             _Themes = Themes.ThemeD;
             break;
+        case "THEMEE":
+        _Themes = Themes.ThemeE;
+        break;
     }
 
     switch (_Themes)
